@@ -1,0 +1,36 @@
+
+<div class="card shadow-lg">
+    <div class="card-header text-center">
+        <h1 class="display-6 fw-bold">Mike's To-Do Application</h1>
+    </div>
+    <div>
+        <mat-slide-toggle id="hideCompleted" style = "padding-left: 10px; padding-right: 25px;" (change)="showHideCompleted($event)">Hide Completed</mat-slide-toggle>
+        <button class="btn btn-light" id="clearButton" style = "width: 150px;" mat-raised-button (click)="clearCompleted()">Clear Completed</button>
+    </div>
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="input-group">
+                    <input id="newReminder" type="text" class="form-control border-0 py-3" placeholder="type here"#newReminder>
+                    <button class="btn text-success" (click)="addTask(newReminder)">
+                        <i class="fa-solid fa-circle-plus fa-xl"></i>
+                    </button>
+                </div>
+            </li>
+            <div *ngFor="let item of allTasks">
+                <div *ngIf="!hideCompleted || !item.done">
+                    <li class="list-group-item rounded-3">
+                        <span>
+                            <i class="text-success" (click)="isDone(item)" [ngClass]="item.done?'fa-solid fa-circle-check':'fa-regular fa-circle'"></i>
+                            {{item.todo}}
+                            <span class="float-end text-secondary"
+                            (click)="deleteReminder(item)">
+                            <i class="fa-solid fa-rectangle-xmark"></i>
+                            </span>
+                        </span>
+                    </li>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>

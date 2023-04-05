@@ -1,27 +1,11 @@
-# ToDo
+To run the project please use the following steps
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Make sure you have node.js and npm installed(version 8.5 or later) on your system
+    a) Open Terminal on Mac or Command Prompt on Windows 
+    b) Check installations with: ('node -v' and 'npm --version')
+    c) To install nodejs (it will need to be installed first if you have neither), follow the download instructions here: https://nodejs.org/en/download
+    d) To install npm use 'npm install -g npm'
+2. Once you have verified that both are installed, navigate to the top directory of the project in your terminal/command prompt (the very first folder of the project)
+3. Once there run 'npm install' to install the latest packages into your node_modules
+4. Now run the command 'npm start' to start running the server
+5. Open your web browswer of choice to http://localhost:4200/ to view the application. Enjoy!
